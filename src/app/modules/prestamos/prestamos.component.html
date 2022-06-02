@@ -1,0 +1,53 @@
+<div class="container">
+    <div style="margin-top: 10px">
+        <form [formGroup]="usuarioForm" name="form">
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input formControlName="nombre" matInput placeholder="Nombre">
+                <mat-error *ngIf="nombre.errors && nombre.errors.required">
+                    {{formErrors.nombre.required}}
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Correo</mat-label>
+                <input formControlName="correo" matInput placeholder="Correo">
+                <mat-error *ngIf="correo.errors && correo.errors.required">
+                    {{formErrors.correo.required}}
+                </mat-error>
+                <mat-error *ngIf="correo.errors && correo.errors.email">
+                    {{formErrors.correo.email}}
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Cédula</mat-label>
+                <input formControlName="cedula" type="number" matInput placeholder="Cédula">
+                <mat-error *ngIf="cedula.errors && cedula.errors.required">
+                    {{formErrors.cedula.required}}
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Valor</mat-label>
+                <input formControlName="valor" type="number" matInput placeholder="(vlr. min. 10.000 - vlr. máx. 100.000)">
+                <mat-error *ngIf="valor.errors && valor.errors.required">
+                    {{formErrors.valor.required}}
+                </mat-error>
+                <mat-error *ngIf="valor.errors && valor.errors.min">
+                    {{formErrors.valor.min}}
+                </mat-error>
+                <mat-error *ngIf="valor.errors && valor.errors.max">
+                    {{formErrors.valor.max}}
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Fecha</mat-label>
+                <input formControlName="fecha" matInput [matDatepicker]="picker">
+                <mat-hint>YYYY-MM-DD</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <div [align]="'end'">
+                <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="guardarUsuario()">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
