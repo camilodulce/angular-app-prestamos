@@ -2,9 +2,23 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
 
-## Development server
+## Get started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Clone the repo
+
+```shell
+git clone https://github.com/camilodulce/angular-app-prestamos.git
+cd app-prestamos
+```
+
+### Install npm packages
+
+```shell
+npm install
+```
+First run `npm run json:server` for start JSON Server.
+
+Second run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
