@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ```shell
 git clone https://github.com/camilodulce/angular-app-prestamos.git
-cd app-prestamos
+cd angular-app-prestamos
 ```
 
 ### Install npm packages
